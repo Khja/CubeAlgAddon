@@ -7,3 +7,5 @@ This addon creates a new Note Type in Anki (2.1+), which allows the user to swif
 - learn different algorithms depending on the AUF;
 - scramble the cube before applying the reverse of the algorithm;
 - have the UB stickers hidden, as they aren't visible.
+
+Copyright (c) 2020 Khja
