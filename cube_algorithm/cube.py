@@ -576,7 +576,9 @@ n_back = '''\
 u_front = "{{#U}}"+_front+"{{/U}}"
 ui_front = "{{#U'}}"+_front.replace("[aufmoves[0]]","[aufmoves[1]]")+"{{/U'}}"
 ui_back = u_back.replace("U Algorithm","U' Algorithm")
+ui_back = ui_back.replace('"(U) "+"{{Algorithm}}"', '''"(U') "+"{{Algorithm}}"''')
 
 u2_front = "{{#U2}}"+_front.replace("[aufmoves[0]]","[aufmoves[2]]")+"{{/U2}}"
 u2_back = u_back.replace("U Algorithm","U2 Algorithm")
+u2_back = u2_back.replace('"(U) "+"{{Algorithm}}"', '''"(U2) "+"{{Algorithm}}"''')
 
