@@ -1,4 +1,4 @@
-# Cube Algorithms Addon
+# LL Cube Algorithm Addon
 
 This addon creates a new Note Type in Anki (2.1+), which allows the user to swiftly write or paste LL algorithms that the cuber wants to memorize without having to generate or import images. Other features include:
 - randomly rotating the cube before having it reverse the algorithm: have a different F color each time;
