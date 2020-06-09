@@ -1,15 +1,17 @@
+from .cube import *
 from anki.hooks import addHook
 from aqt import mw
 from anki.consts import *
-from .cube import *
 import os
 from aqt.qt import *
+
 
 # MIT License
 # Copyright (c) 2020 Khja
 # Please read before using this piece of software.
 
-VERSION = '1.0'
+
+VERSION = '2.0'
 FIELDS = ['Case',
           'Notes',
           'Algorithm',
@@ -26,22 +28,8 @@ MODEL_NAME = 'Cube Algorithm'+' ('+VERSION+')'
 MODEL_TYPE = 'cubalg'
 
 
-def setTrigger(editor):
-    editor.web.eval("wrap('(', ')');")
 
-    fields = editor.note.fields
-    
-    fields[0] = 'hello'
-
-    #Update editor
-    editor.setNote(editor.note)
-
-
-def addMyButton(buttons, editor):
-    editor._links['trigger'] = setTrigger
-    return buttons + [editor._addButton('/Users/siebren/Desktop/N/M/F/FORRITUNGARMÁL/PYTHON/QT/book.ico','trigger','hi')]
-
-
+# Setup
 def addModel1(col):
     """Add add-on note type to collection"""
     models = col.models
@@ -89,5 +77,3 @@ def setupAddon():
         model = addModel1(mw.col)
 
 addHook("profileLoaded", setupAddon)
-addHook('setupEditorButtons',addMyButton)
-
